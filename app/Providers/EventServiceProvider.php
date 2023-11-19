@@ -16,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         Registered::class => [
-            SendEmailVerificationNotification::class,
+
         ],
     ];
 
@@ -25,7 +25,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        env('SHOULD_VERIFY_USER_EMAIL') and $this->listen[Registered::class][] = SendEmailVerificationNotification::class;
     }
 
     /**

@@ -50,7 +50,7 @@ composer install
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 <li>Generate .env file from .env.decrypted:
-php artisan env:decrypt --key=base64:658grKqKXTj4mgXyPIWdiRFgMhf0RY+zL/t4fy2Wy6o=
+php artisan env:decrypt --key=base64:oZg5Q1/sGhNgD8X8PxtlQT9CJxT/t9qW4TsDcDIA6nU=
 
 <li>Laravel Sail install
 php artisan sail:install
