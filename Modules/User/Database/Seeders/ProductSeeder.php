@@ -10,8 +10,8 @@ class ProductSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(int $count = 100): void
     {
-        (new ProductFactory())->count(100)->create();
+        (new ProductFactory())->count($count)->create();
     }
 }
