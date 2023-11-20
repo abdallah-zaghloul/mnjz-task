@@ -5,30 +5,70 @@
 <h2>Live Demo</h2>
 <strong>Please watch this video 👇</strong>
 
-[![Live Demo](image_link)](video_link)
-<ul> Please check the following:
-<li> To DO
-</li>
-</ul>
+[![Live Demo](https://img.youtube.com/vi/npRcg5_fPrw/0.jpg)](https://youtu.be/npRcg5_fPrw)
 
 <h2>Project Infra Structure</h2>
 <ul>
 <li> The Project is a Decoupled Modular Monolithic App :
-    HMVC Modules (you can turn on/off each module and republish/reuse it at another project)
+    HMVC Modules (you can turn on/off each module and republish/reuse it at another project):
+<p>
+<a target="_blank" href="https://drive.google.com/uc?export=view&id=1MDMrOSK9iAtsJq14os09uDVRsMbFd9M_">
+<img src="https://drive.google.com/uc?export=view&id=1MDMrOSK9iAtsJq14os09uDVRsMbFd9M_">
+</a>
+
+<a target="_blank" href="https://drive.google.com/uc?export=view&id=1ipSpAv9TUY8XwXdJwyipu2uMy0C27xXM">
+<img src="https://drive.google.com/uc?export=view&id=1ipSpAv9TUY8XwXdJwyipu2uMy0C27xXM">
+</a>
+</p>
 
 <li> Module Structure (Repository Design Pattern)
 <p>
-<a target="_blank" href="https://drive.google.com/uc?export=view&id=1_CTRCCiZ0X4nG06_xTv48y6MH5vBb1gx">
-<img src="https://drive.google.com/uc?export=view&id=1_CTRCCiZ0X4nG06_xTv48y6MH5vBb1gx" width="400" height="200">
+<a target="_blank" href="https://drive.google.com/uc?export=view&id=1snsMfaRDm6hW-uOmEus4e6ZVi35rBlqO">
+<img src="https://drive.google.com/uc?export=view&id=1_CTRCCiZ0X4nG06_xTv48y6MH5vBb1gx">
 </a>
 </p>
 
 <li> Separated/Attached Tests
+<p>
+<a target="_blank" href="https://drive.google.com/uc?export=view&id=11hd7ACMLYU9WcTXBD5Eo_7mOBdM20I6M">
+<img src="https://drive.google.com/uc?export=view&id=11hd7ACMLYU9WcTXBD5Eo_7mOBdM20I6M">
+</a>
+</p>
 </ul>
+
 
 <h2>Solution Implementation</h2>
 <pre>
+- Choose livewire for realtime ajax request : 
+make it pretty simple for users to add/remove
+products from their cart
 
+- Call my module zaghloul-soft/user-module for reuse-ability
+of user module authentication with HMVC Repository
+based structure
+
+- ERD :
+User hasMany CartItems
+CartItem Belongs to Product
+User HasMany Products Through CartItems
+
+- Flow :
+*Route (/home) => HomeController => Home View(Load Components)
+
+Components :
+*CartComponent => CartService => CartItemRepository
+*ProductsComponent => ProductsService => ProductRepository
+
+- Each Click Dispatch Event To its ComponentService which
+interact with view (Single Responsibility + Observer DP)
+
+# No need for cart entity:
+the info it added is cartId only
+so you should work directly with
+cartItems acc to task requirements.
+
+#Bonus Points Can be added : 
+- disable (+/-) button after product added to cart
 </pre>
 
 <h3>How To Run The Project Locally</h3>
